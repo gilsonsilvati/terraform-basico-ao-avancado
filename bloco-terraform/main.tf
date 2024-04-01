@@ -1,31 +1,19 @@
 terraform {
-  
-}
+  required_version = "~> 1.0.0" # 1.0.0 até 1.0.n
 
-provider "aws" {
-  
-}
+  required_providers {
+    aws = {
+        version = "1.0" # exemplo
+        source = "hashicorp/aws"
+    }
 
-resource "aws_instance" "vm1" {
-  
-}
+    azurerm = {
+        version = "2.0" # exemplo
+        source = "hashicorp/azurerm"
+    }
+  }
 
-data "aws_ami" "image" {
-  
-}
+  backend "azurerm" {
 
-module "network" {
-  source = "todo"
-}
-
-variable "vm_name" {
-  
-}
-
-output "vm1_ip" {
-  value = "todo"
-}
-
-locals {
-  
+  }
 }
