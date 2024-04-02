@@ -3,13 +3,13 @@ terraform {
 
   required_providers {
     aws = {
-        version = "1.0" # exemplo
-        source = "hashicorp/aws"
+      version = "1.0" # exemplo
+      source  = "hashicorp/aws"
     }
 
     azurerm = {
-        version = "2.0" # exemplo
-        source = "hashicorp/azurerm"
+      version = "2.0" # exemplo
+      source  = "hashicorp/azurerm"
     }
   }
 
